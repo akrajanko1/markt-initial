@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
+const async = require('async');
 const restService = express();
 var db = mongoose.connect('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
 var User = require('./models/userModel');
@@ -39,7 +40,7 @@ restService.post("/", function(req, res) {
     }
 })
 });
-restService.post("/temp", function(req, res) {
+restService.post("/temp", async function(req, res) {
   if(req.body.result.parameters.echoText=="clothes"){
     var speech =
     req.body.result &&
@@ -59,11 +60,20 @@ else{
 });
 
 function clothes(){
-        return ({
+  User.find(function(err,users){
+    if(err){
+        res.status(500).send(err);
+    }
+    else{
+        //res.send(req);
+        return(users);
+    }
+})
+        /*return ({
           speech: "error1",
           displayText: "error1",
           source: "webhook-echo-sample"
-        });
+        });*/
 }
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
