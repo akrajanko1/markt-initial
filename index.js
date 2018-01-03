@@ -48,23 +48,23 @@ restService.post("/temp", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    speech: "hi",
-    displayText: "hi",
+    speech: speech,
+    displayText: speech,
     source: "webhook-echo-sample"
   });
 }
 else{
-  return res.json({
+  return res.json(clothes());
+}
+});
+
+function clothes(){
+        return ({
           speech: "error1",
           displayText: "error1",
           source: "webhook-echo-sample"
         });
 }
-});
-
-/*function clothes(){
-        return ();
-}*/
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
