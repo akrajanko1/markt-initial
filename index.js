@@ -68,7 +68,7 @@ else{
     source: "webhook-ec1ho-sample" 
   }
   var sval = JSON.stringify(val);
-  val.values=sval;
+  val.data=sval;
   return res.json(val);
 }
 });
