@@ -69,7 +69,8 @@ else{
   }
   //var sval = JSON.stringify(val);
   //val.data=sval;
-  val.data=tmp;
+  var sval = JSON.stringify(tmp);
+  val.data=sval;
   return res.json(val);
 }
 });
