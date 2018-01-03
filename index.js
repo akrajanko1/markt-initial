@@ -55,8 +55,8 @@ restService.post("/temp", async function(req, res) {
   });
 }
 else{
-  //var tmp=await clothes();
-  res.json({
+  var tmp=await clothes();
+  return res.json({
     speech: speech,
     displayText: speech,
     source: "webhook-echo-sample",
