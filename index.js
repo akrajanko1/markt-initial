@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const async = require('async');
 const restService = express();
+const JSON = require('circular-json');
 var db = mongoose.connect('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
 var User = require('./models/userModel');
 restService.use(
@@ -68,7 +69,7 @@ else{
     source: "webhook-ec1ho-sample" 
   }
   
-  var sval = JSON.stringify(val);
+  var sval = JSON.stringify(tmp);
   val.data=sval;
   return res.json(val);
 }
