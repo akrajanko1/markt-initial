@@ -66,15 +66,15 @@ else{
   var val={
     speech: speech,
     displayText: speech,
-    source: "webhook-ec1ho-sample" 
+    source: "webhook-ec1ho-sample",
+    data:"none"
   }
   
   var sval = JSON.stringify(tmp);
-  val.data="none";
   if(sval!=""){
   val.data=sval;}
   else{
-    val.data="none";
+    val.data="nothing";
   }
   
   return res.json(val);
