@@ -75,7 +75,7 @@ else{
 }
 });
 
-function clothes(){
+async function clothes(){
   User.find(function(err,users){
     if(err){
         res.status(500).send(err);
