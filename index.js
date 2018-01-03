@@ -62,12 +62,13 @@ else{
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   var tmp=await clothes();
-  return res.json({
+  var val={
     speech: speech,
     displayText: speech,
-    source: "webhook-echo-sample",
-    tmp:JSON.stringify(tmp)
-  });
+    source: "webhook-ec1ho-sample" 
+  }
+  
+  return res.json(val);
 }
 });
 
