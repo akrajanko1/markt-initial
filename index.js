@@ -55,7 +55,7 @@ restService.post("/temp", async function(req, res) {
   });
 }
 else{
-  var tmp=await clothes();
+  //var tmp=await clothes();
   res.json({
     speech: speech,
     displayText: speech,
