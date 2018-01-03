@@ -48,8 +48,8 @@ restService.post("/temp", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    speech: speech,
-    displayText: speech,
+    speech: "hi",
+    displayText: "hi",
     source: "webhook-echo-sample"
   });
 }
