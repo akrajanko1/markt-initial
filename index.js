@@ -41,6 +41,8 @@ restService.post("/", function(req, res) {
 })
 });
 restService.post("/temp", async function(req, res) {
+  var t=await clothes();
+  return res.send(t);
   if(req.body.result.parameters.echoText=="clothes"){
     var speech =
     req.body.result &&
@@ -67,8 +69,7 @@ else{
     displayText: speech,
     source: "webhook-ec1ho-sample" 
   }
-  var sval = JSON.stringify(val);
-  val.data=sval;
+  
   //var sval = JSON.stringify(tmp);
   //val.data=sval;
   return res.json(val);
