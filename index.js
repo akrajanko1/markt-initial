@@ -59,13 +59,7 @@ else{
 });
 
 function clothes(){
-  var val;
-  User.find(function(err,users){
-        //res.send(req);
-        val=users;
-})
         return ({
-          val1:val
           speech: "error1",
           displayText: "error1",
           source: "webhook-echo-sample"
