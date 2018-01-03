@@ -40,8 +40,7 @@ restService.post("/", function(req, res) {
 })
 });
 restService.post("/temp", function(req, res) {
-  if(req.body.result.parameters.echoText=="clothes"){
-    var speech =
+  var speech =
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.echoText
@@ -52,8 +51,6 @@ restService.post("/temp", function(req, res) {
     displayText: speech,
     source: "webhook-echo-sample"
   });
-}
-
 });
 
 restService.listen(process.env.PORT || 8000, function() {
