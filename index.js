@@ -54,16 +54,16 @@ restService.post("/temp", function(req, res) {
   });
 }
 else{
-  return res.json(clothes());
-}
-});
-
-function clothes(){
-        return ({
+  return res.json({
           speech: "error1",
           displayText: "error1",
           source: "webhook-echo-sample"
         });
+}
+});
+
+function clothes(){
+        return ();
 }
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
