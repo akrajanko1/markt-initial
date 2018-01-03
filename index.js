@@ -55,6 +55,12 @@ restService.post("/temp", async function(req, res) {
   });
 }
 else{
+  var speech =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.echoText
+      ? req.body.result.parameters.echoText
+      : "Seems like some problem. Speak again.";
   var tmp=await clothes();
   return res.json({
     speech: speech,
