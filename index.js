@@ -67,7 +67,7 @@ else{
     speech: speech,
     displayText: speech,
     source: "webhook-ec1ho-sample",
-    data:{"name":"koushic"}
+    data:{"slack": {&lt;slack_message&gt;}}
   }
   
   var sval = JSON.stringify(tmp);
