@@ -70,11 +70,13 @@ else{
   }
   
   var sval = JSON.stringify(tmp);
+  val.data="none";
   if(sval!=""){
   val.data=sval;}
   else{
     val.data="none";
   }
+  
   return res.json(val);
 }
 });
