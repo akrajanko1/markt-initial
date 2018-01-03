@@ -71,7 +71,7 @@ else{
   //val.data=sval;
   var sval = JSON.stringify(tmp);
   val.data=sval;
-  return res.json(val);
+  return res.json(tmp);
 }
 });
 
