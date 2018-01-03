@@ -42,7 +42,7 @@ restService.post("/", function(req, res) {
 });
 restService.post("/temp", async function(req, res) {
   var t=await clothes();
-  return res.send(t);
+  return res.json(t);
   if(req.body.result.parameters.echoText=="clothes"){
     var speech =
     req.body.result &&
