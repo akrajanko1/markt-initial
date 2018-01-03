@@ -66,7 +66,7 @@ else{
     speech: speech,
     displayText: speech,
     source: "webhook-echo-sample",
-    tmp:tmp
+    tmp:JSON.stringify(tmp)
   });
 }
 });
