@@ -67,8 +67,9 @@ else{
     displayText: speech,
     source: "webhook-ec1ho-sample" 
   }
-  var sval = JSON.stringify(tmp);
-  val.data=sval;
+  //var sval = JSON.stringify(val);
+  //val.data=sval;
+  val.data=tmp;
   return res.json(val);
 }
 });
