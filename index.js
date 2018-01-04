@@ -116,7 +116,14 @@ else{
     }
   }
 };
-  val.data=richResponsesV1;
+  const temp={"buttons": [
+                    {
+                      "type": "web_url",
+                      "url": "https://assistant.google.com/",
+                      "title": "This is a button"
+                    }
+                  ]}
+  val.data=temp;
   //val.data=sval;
   return res.json(val);
 }
