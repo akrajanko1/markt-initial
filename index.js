@@ -74,6 +74,7 @@ else{
     "displayText": speech,
     "source": "webhook-echo-sample"
   }
+  const string='{'+tmp+'}';
   //val.speech=speech+" haha";
   //val.speech = val;
   /*if(sval!=""){
@@ -93,35 +94,9 @@ else{
         'fallback': 'This is a fallback.'
       }
     ]
-  },
-  'facebook': {
-    'attachment': {
-      'type': 'template',
-      'payload': {
-        'template_type': 'generic',
-        'elements': [
-          {
-            'title': 'Title: this is a title',
-            'image_url': 'https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png',
-            'subtitle': 'This is a subtitle',
-            'default_action': {
-              'type': 'web_url',
-              'url': 'https://assistant.google.com/'
-            },
-            'buttons': [
-              {
-                'type': 'web_url',
-                'url': 'https://assistant.google.com/',
-                'title': 'This is a button'
-              }
-            ]
-          }
-        ]
-      }
-    }
   }
 };
-  const string='{'+tmp+'}';
+  
   const temp={"data":richResponsesV1}
   val.data=temp;
   //val.data=sval;
