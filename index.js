@@ -143,7 +143,7 @@ else{
 };
   
   const temp={"data":richResponsesV1}
-  val.data=temp;
+  val.data=tmp;
   //val.data=sval;
   return res.json(val);
 }
