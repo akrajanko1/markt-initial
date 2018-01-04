@@ -122,7 +122,7 @@ else{
   }
 };
   var string=JSON.stringify(tmp);
-  const temp={"data":string}
+  const temp={"data":tmp}
   val.data=temp;
   //val.data=sval;
   return res.json(val);
