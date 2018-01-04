@@ -150,13 +150,13 @@ else{
 });
 
 async function clothes(){
-  User.find(function(err,users){
+  return new Promise(function(resolve,reject){User.find(function(err,users){
     if(err){
         res.status(500).send(err);
     }
     else{
         //res.send(req);
-        return(users);
+        resolve(users);
     }
 })
         /*return ({
@@ -164,7 +164,7 @@ async function clothes(){
           displayText: "error1",
           source: "webhook-echo-sample"
         });*/
-}
+})}
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
