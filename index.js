@@ -122,8 +122,8 @@ else{
   }
 };
   const string='{'+tmp+'}';
-  const temp={"data":tmp}
-  val.data=richResponsesV1;
+  const temp={"data":richResponsesV1}
+  val.data=temp;
   //val.data=sval;
   return res.json(val);
 }
