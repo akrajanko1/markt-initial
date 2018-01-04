@@ -76,7 +76,7 @@ else{
   else{
     val.data="nothing";
   }*/
-  val.data=sval;
+  val.data=val;
   return res.json(val);
 }
 });
