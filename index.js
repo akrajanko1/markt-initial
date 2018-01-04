@@ -68,7 +68,7 @@ else{
     "speech": speech,
     "displayText": speech,
     "source": "webhook-ec1ho-sample",
-    "data": sval
+    "data": "data"
   }
   
   
