@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const async = require('async');
 const restService = express();
 const JSON = require('circular-json');
-var db = mongoose.connect('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
+var db = mongoose.connect('mongodb://akr:akr@ds239127.mlab.com:39127/markt1');
 var User = require('./models/userModel');
 restService.use(
   bodyParser.urlencoded({
