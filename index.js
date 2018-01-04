@@ -63,14 +63,15 @@ else{
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   var tmp=await clothes();
+  var sval = JSON.stringify(tmp[0]);
   var val={
     "speech": speech,
     "displayText": speech,
     "source": "webhook-ec1ho-sample",
-    "data": tmp[0]
+    "data": sval
   }
   
-  var sval = JSON.stringify(val);
+  
   /*if(sval!=""){
   val.data=sval;}
   else{
