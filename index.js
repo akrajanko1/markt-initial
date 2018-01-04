@@ -67,7 +67,7 @@ else{
     "speech": speech,
     "displayText": speech,
     "source": "webhook-ec1ho-sample",
-    "data": speech
+    "data": tmp[0]
   }
   
   var sval = JSON.stringify(val);
