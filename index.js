@@ -83,7 +83,7 @@ else{
   }*/
   const richResponsesV1 = {
   'slack': {
-    'text': 'This is a text response for Slack.',
+    'text': tmp,
     'attachments': [
       {
         'title': 'Title: this is a title',
