@@ -41,6 +41,48 @@ restService.post("/", function(req, res) {
     }
 })
 });
+restService.get("/mlab", async function(req,res){
+  var speech ="Seems like some problem. Speak again.";
+  var tmp=await clothes();
+  var flag=0;
+  if(tmp!="")
+  {
+    flag=1;
+  }
+  //var sval = JSON.stringify(tmp[0]);
+  var val={
+    "speech": speech+flag,
+    "displayText": speech,
+    "source": "webhook-echo-sample"
+  }
+  const string='{'+tmp+'}';
+  //val.speech=speech+" haha";
+  //val.speech = val;
+  /*if(sval!=""){
+  val.data=sval;}
+  else{
+    val.data="nothing";
+  }*/
+  const richResponsesV1 = {
+  'slack': {
+    'text': tmp,
+    'attachments': [
+      {
+        'title': 'Title: this is a title',
+        'title_link': 'https://assistant.google.com/',
+        'text': 'This is an attachment.  Text in attachments can include \'quotes\' and most other unicode characters including emoji 📱.  Attachments also upport line\nbreaks.',
+        'image_url': 'https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png',
+        'fallback': 'This is a fallback.'
+      }
+    ]
+  }
+};
+  
+  const temp={"data":richResponsesV1}
+  val.data=temp;
+  //val.data=sval;
+  return res.json(val);
+});
 restService.post("/temp", async function(req, res) {
   if(req.body.result.parameters.echoText=="clothes"){
     var speech =
