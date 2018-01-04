@@ -67,8 +67,7 @@ else{
   var val={
     "speech": speech,
     "displayText": speech,
-    "source": "webhook-ec1ho-sample",
-    "data": "data"
+    "source": "webhook-ec1ho-sample"
   }
   
   
