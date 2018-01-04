@@ -121,7 +121,7 @@ else{
     }
   }
 };
-  const temp={"data":tmp}
+  const temp={"data":"tmp"}
   val.data=temp;
   //val.data=sval;
   return res.json(val);
