@@ -71,12 +71,12 @@ else{
   }
   
   var sval = JSON.stringify(tmp);
-  if(sval!=""){
+  /*if(sval!=""){
   val.data=sval;}
   else{
     val.data="nothing";
-  }
-  
+  }*/
+  val.data=sval;
   return res.json(val);
 }
 });
