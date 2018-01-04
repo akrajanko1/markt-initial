@@ -65,12 +65,12 @@ else{
   var tmp=await clothes();
   //var sval = JSON.stringify(tmp[0]);
   var val={
-    //"speech": speech,
+    "speech": speech,
     "displayText": speech,
     "source": "webhook-echo-sample"
   }
   //val.speech=speech+" haha";
-  val.speech = val;
+  //val.speech = val;
   /*if(sval!=""){
   val.data=sval;}
   else{
