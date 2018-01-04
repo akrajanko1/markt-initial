@@ -121,13 +121,7 @@ else{
     }
   }
 };
-  const temp={"buttons": [
-                    {
-                      "type": "web_url",
-                      "url": "https://assistant.google.com/",
-                      "title": "This is a button"
-                    }
-                  ]}
+  const temp={"data":tmp}
   val.data=temp;
   //val.data=sval;
   return res.json(val);
