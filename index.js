@@ -121,7 +121,7 @@ else{
     }
   }
 };
-  const string='{'+JSON.stringify(tmp)+'}';
+  const string='{'+tmp+'}';
   const temp={"data":tmp}
   val.data=temp;
   //val.data=sval;
