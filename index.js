@@ -67,9 +67,9 @@ else{
   var val={
     //"speech": speech,
     "displayText": speech,
-    "source": "webhook-ec1ho-sample"
+    "source": "webhook-echo-sample"
   }
-  val.speech=speech;
+  val.speech=speech+" haha";
   
   /*if(sval!=""){
   val.data=sval;}
