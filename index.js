@@ -67,7 +67,7 @@ else{
     "speech": speech,
     "displayText": speech,
     "source": "webhook-ec1ho-sample",
-    //data:{"name":"koushic"}
+    "data": speech
   }
   
   var sval = JSON.stringify(val);
@@ -76,7 +76,7 @@ else{
   else{
     val.data="nothing";
   }*/
-  val.data=sval;
+  //val.data=sval;
   return res.json(val);
 }
 });
