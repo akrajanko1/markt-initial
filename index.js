@@ -81,8 +81,11 @@ restService.get("/mlab", async function(req,res){
   const temp={"data":richResponsesV1}
   val.data=temp;
   //val.data=sval;
-  return res.json(val);
+  return res.json(tmp);
 });
+//mlab ends///////////////////////
+
+
 restService.post("/temp", async function(req, res) {
   if(req.body.result.parameters.echoText=="clothes"){
     var speech =
