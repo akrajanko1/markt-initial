@@ -100,6 +100,19 @@ restService.post("/temp", async function(req, res) {
     source: "webhook-echo-sample"
   });
 }
+else if(req.body.result.parameters.echoText=="categories"){
+  var speech =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.echoText
+      ? req.body.result.parameters.echoText
+      : "Seems like some problem. Speak again.";
+  return res.json({
+    speech: speech+"works",
+    displayText: speech,
+    source: "webhook-echo-sample"
+  });
+}
 else{
   var speech =
     req.body.result &&
