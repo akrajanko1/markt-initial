@@ -113,7 +113,7 @@ else if(req.body.result.parameters.echoText=="categories"){
     "displayText": speech,
     "source": "webhook-echo-sample"
   }
-  val.data="hi";
+  val.data={"data1":tmp};
   //val.data=sval;
   return res.json(val);
 }
@@ -167,6 +167,22 @@ else{
 });
 
 async function clothes(){
+  return new Promise(function(resolve,reject){User.find(function(err,users){
+    if(err){
+        res.status(500).send(err);
+    }
+    else{
+        //res.send(req);
+        resolve(users);
+    }
+})
+        /*return ({
+          speech: "error1",
+          displayText: "error1",
+          source: "webhook-echo-sample"
+        });*/
+})}
+async function category(){
   return new Promise(function(resolve,reject){User.find(function(err,users){
     if(err){
         res.status(500).send(err);
