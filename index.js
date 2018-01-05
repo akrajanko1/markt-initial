@@ -117,11 +117,11 @@ else if(req.body.result.parameters.echoText=="categories"){
     "displayText": speech,
     "source": "webhook-echo-sample"
   }
-  val.data={"type": "imgscroll_wtext",
+  val.data={"payload":{"type": "imgscroll_wtext",
             "heading": "Top Categories",
             "more": "https://www.google.co.in/",
             "text_small": "no",
-            "cat":tmp};
+            "cat":tmp}};
   //val.data=sval;
   return res.json(val);
 }
