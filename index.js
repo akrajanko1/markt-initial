@@ -107,11 +107,15 @@ else if(req.body.result.parameters.echoText=="categories"){
     req.body.result.parameters.echoText
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
-  return res.json({
-    speech: speech+"works",
-    displayText: speech,
-    source: "webhook-echo-sample"
-  });
+  var tmp=await category();
+  var val={
+    "speech": speech+"works1",
+    "displayText": speech,
+    "source": "webhook-echo-sample"
+  }
+  val.data="hi";
+  //val.data=sval;
+  return res.json(val);
 }
 else{
   var speech =
