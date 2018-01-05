@@ -8,10 +8,10 @@ const restService = express();
 const JSON = require('circular-json');
 var db = mongoose.connect('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
 var User = require('./models/userModel');
-Schema = mongoose.Schema;
+/*Schema = mongoose.Schema;
 var modelName="categories";
 var defaultModel = new Schema({})
-//var User1 = db.model(modelName,defaultModel);
+var User1 = db.model(modelName,defaultModel);*/
 restService.use(
   bodyParser.urlencoded({
     extended: true
