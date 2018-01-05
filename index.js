@@ -6,12 +6,12 @@ const mongoose = require('mongoose');
 const async = require('async');
 const restService = express();
 const JSON = require('circular-json');
-var db = mongoose.connect('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
-var User = require('./models/userModel');
+var db = mongoose.createConnection('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
+//var User = require('./models/userModel');
 var Schema = mongoose.Schema;
 var modelName="categories";
 var defaultModel = new Schema({})
-//var User1 = db.model(modelName,defaultModel);
+var User = db.model(modelName,defaultModel);
 restService.use(
   bodyParser.urlencoded({
     extended: true
@@ -113,7 +113,7 @@ else if(req.body.result.parameters.echoText=="categories"){
       : "Seems like some problem. Speak again.";
   var tmp=await category();
   var val={
-    "speech": speech+"works1",
+    "speech": speech+"works2",
     "displayText": speech,
     "source": "webhook-echo-sample"
   }
