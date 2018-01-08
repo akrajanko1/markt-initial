@@ -9,7 +9,7 @@ const JSON = require('circular-json');
 var db = mongoose.createConnection('mongodb://akr:akr@ds239127.mlab.com:39127/markt');
 //var User = require('./models/userModel');
 var Schema = mongoose.Schema;
-var modelName="cat";
+var modelName="names";
 var defaultModel = new Schema({})
 var User = db.model(modelName,defaultModel);
 restService.use(
